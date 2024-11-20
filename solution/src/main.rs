@@ -17,7 +17,7 @@ fn classify_numbers(numbers: Vec<usize>) -> String {
     
     for number in numbers {
         let sum = sum_of_divisors(number);
-        if sum < number {
+        if sum < number || number == 1 {
             result.push('D'); // Недостаточное
         } else if sum > number {
             result.push('A'); // Избыточное
